@@ -3,7 +3,7 @@ FOR TEST EXAMPLES AND DIFFERENT MATCHERS (`toEqual`, `toBe`, `not.toBe`, etc):
 https://jestjs.io/docs/using-matchers
 */
 
-const centsToDecimals = require("../src/cents-to-decimals")
+const {centsToDecimals} = require("../src/cents-to-decimals")
 
 
 describe('centsToDecimals function', () => {
@@ -52,17 +52,17 @@ describe('centsToDecimals function', () => {
     // console.log(centsToDecimals(1000).slice(0, 5) === '10.00');
 
     // ... complete the test assertion below
-    expect(centsToDecimals(50273)).toEqual('502.73');
+    expect(centsToDecimals(50273)).toEqual('502.73$');
 
     // console.log(centsToDecimals(50273).slice(0, 6) === '502.73');
 
     // ... complete the test assertion below
-    expect(centsToDecimals(0)).toEqual('0.00');
+    expect(centsToDecimals(0)).toEqual('0.00$');
 
     // console.log(centsToDecimals(0).slice(0, 4) === '0.00');
 
     // ... complete the test assertion below
-    expect(centsToDecimals(23)).toEqual('23.00');
+    expect(centsToDecimals(2300)).toEqual('23.00$');
   });
 
   it('Should return a string representation of a number with `$` sign appended at the end.', () => {
